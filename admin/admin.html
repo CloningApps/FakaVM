@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakaVM Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FakaVM Admin Panel</h1>
+        </header>
+        <main>
+            <div id="login-form">
+                <h2>Login</h2>
+                <form id="admin-login">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p id="login-message"></p>
+            </div>
+            <div id="admin-content" class="hidden">
+                <h2>Welcome, Admin!</h2>
+                <section>
+                    <h3>VM Statistics</h3>
+                    <ul>
+                        <li>Total VMs: <span id="total-vms">150</span></li>
+                        <li>Active VMs: <span id="active-vms">120</span></li>
+                        <li>Inactive VMs: <span id="inactive-vms">30</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>User Management</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Username</th>
+                                <th>Plan</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>john_doe</td>
+                                <td>Pro</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>jane_smith</td>
+                                <td>Basic</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>bob_johnson</td>
+                                <td>Enterprise</td>
+                                <td>Inactive</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 FakaVM. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('admin-login').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const loginMessage = document.getElementById('login-message');
+            const loginForm = document.getElementById('login-form');
+            const adminContent = document.getElementById('admin-content');
+
+            if (password === 'fakavm') {
+                loginMessage.textContent = 'Login successful!';
+                loginMessage.style.color = 'green';
+                loginForm.classList.add('hidden');
+                adminContent.classList.remove('hidden');
+            } else {
+                loginMessage.textContent = 'Incorrect password. Please try again.';
+                loginMessage.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+  </html>
