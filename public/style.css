@@ -79,75 +79,6 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
-/* Features section */
-#features ul {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-#features li {
-    background-color: #ecf0f1;
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: center;
-}
-
-/* Pricing section */
-.pricing-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.price {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.card ul {
-    list-style-type: none;
-    margin-bottom: 1rem;
-}
-
-.card li {
-    margin-bottom: 0.5rem;
-}
-
-/* Contact form */
-form {
-    display: grid;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-textarea {
-    height: 150px;
-}
 
 /* CTA Button */
 .cta-button {
@@ -182,8 +113,3 @@ footer {
     nav ul li {
         margin: 0.5rem 0;
     }
-
-    .pricing-cards {
-        grid-template-columns: 1fr;
-    }
-  }
