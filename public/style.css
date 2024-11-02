@@ -57,17 +57,6 @@ h1, h2 {
     text-align: center;
 }
 
-#vm3 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.description {
-    font-family: Arial, sans-serif;
-    color: #333;
-    text-align: left;
-}
-
 #home h1 {
     font-size: 2.5rem;
     color: #2c3e50;
